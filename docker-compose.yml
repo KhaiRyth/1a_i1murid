@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  khairina-ryth-core:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: khairina-ryth/runtime:v4.0
+    container_name: kr_adab_runtime_prod
+    environment:
+      - KR_NODE_ID=HERON_R2_REPLICA_1
+      - QUANTUM_LOGIC_ENABLED=true
+      - MIZAN_EQUITY_FACTOR=1.5
+      - ENCRYPTION_ADAPTIVE_MODE=HIGH
+    volumes:
+      - kr_audit_logs:/app/master_box/logs
+      - kr_secure_vault:/app/master_box/secure_store:ro
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+        reservations:
+          cpus: '1.0'
+          memory: 2G
+    restart: on-failure
+
+volumes:
+  kr_audit_logs:
+    driver: local
+  kr_secure_vault:
+    driver: local
