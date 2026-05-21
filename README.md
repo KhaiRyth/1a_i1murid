@@ -54,3 +54,31 @@ For the Google for Startups Cloud Program evaluation (Case #00280358), the follo
 * `docs/Executive_Pitch_Summary.pdf` - The formal project and architecture overview.
 * `data/System_Audit_Log.csv` - The smart ledger allocation verification records (Verified Record: TX_9984).
 * `Dockerfile` - Production-ready environment configuration for high-reliability local/cloud migration.
+## 🚀 Architecture Changelog (Patch v4.1-Makmur)
+
+We have officially updated the deployment infrastructure layer to integrate the **AI Untuk Rakyat** downstream initiatives directly into the core execution pipeline. 
+
+### 🛠️ What's New in this Patch?
+
+* **Integrated Module 1: AI "Bantu Poket" (Crowdsourced Grocery Tracker)**
+  * Added environment flag `RAKYAT_MODUL_BANTU_POKET=ENABLED` to allocate explicit runtime resources for socio-economic optimization algorithms.
+  * Configured local isolation parameters (`LOCAL_RADIUS_OPTIMIZATION_KM=2.0`) to handle micro-level data processing without server-side overhead.
+  * Activated the `BUDGET_MENU_GENERATOR` agent to transform raw price data into actionable cost-saving solutions for local families.
+
+* **Strict Ethical Guardrails (Meta-Algorithm Adab Enforcement)**
+  * Hardcoded the minimum baseline constraint `ADAB_INDEX_MIN_THRESHOLD=0.6600` directly into the container lifecycle. This ensures that crowdsourced data pipelines are continuously filtered against algorithmic bias, price manipulation, or bad actors targeting micro-vendors.
+
+* **Production-Grade Compliance & Security**
+  * Maintained a strict multi-stage Docker build footprint to keep images lightweight and isolated.
+  * Continued isolation enforcement via non-root execution (`USER security_agent`), aligning fully with the **ISO/IEC 42001** operational frameworks.
+
+### 📊 Deployment Reference
+
+| Environment Variable | Target/Value | Purpose |
+| :--- | :--- | :--- |
+| `RAKYAT_MODUL_BANTU_POKET` | `ENABLED` | Activates localized consumer price engine |
+| `LOCAL_RADIUS_OPTIMIZATION_KM`| `2.0` | Bounds regional optimization matrix |
+| `ADAB_INDEX_MIN_THRESHOLD` | `0.6600` | Minimum values alignment threshold |
+
+---
+*Built with sovereign pride for the community. Ready for Google Cloud scaling deployment.*
