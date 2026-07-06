@@ -11,8 +11,8 @@ class KhaiRythV4Update:
     def __init__(self):
         self.governance_mode = "SOVEREIGN_OFFLINE"
         self.active_lens = "islamic"
-        self.adab_alignment_score = 0.6600
-        
+        self.adab_alignment_score = 0.9470
+        self.sacred_data_lock = "1101_KASIH_SAYANG_0110"
     def hash_pii_data(self, text: str) -> str:
         """Menghalang kebocoran data peribadi ke repo awam (PDPA Compliant)"""
         return hashlib.sha256(text.encode('utf-8')).hexdigest()
